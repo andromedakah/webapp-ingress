@@ -1,0 +1,21 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: birds-service
+spec:
+  selector:
+    app: birds
+  ports:
+  # Default port used by the image
+  - port: 5000
+---
+kind: Service
+apiVersion: v1
+metadata:
+  name: horses-service
+spec:
+  selector:
+    app: horses
+  ports:
+  # Default port used by the image
+  - port: 5000

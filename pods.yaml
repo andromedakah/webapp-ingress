@@ -1,0 +1,25 @@
+kind: Pod
+apiVersion: v1
+metadata:
+  name: horses-app
+  labels:
+    app: horses
+spec:
+  containers:
+  - name: horses-app
+    image: hashicorp/http-echo:0.2.3
+    args:
+    - "-text=horses"
+---
+kind: Pod
+apiVersion: v1
+metadata:
+  name: birds-app
+  labels:
+    app: birds
+spec:
+  containers:
+  - name: birds-app
+    image: hashicorp/http-echo:0.2.3
+    args:
+    - "-text=birds"
